@@ -1,0 +1,77 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-image: url(images/background.gif);
+}
+
+h1,h2{
+    text-align: center;
+    color:white
+}
+
+form {
+    max-width: 600px;
+    margin: auto;
+    background-image: url();
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgb(0, 0, 0, 0.5);
+    padding: 2px;
+}
+
+fieldset {
+    margin-bottom: 15px;
+    padding: 10px;
+}
+
+legend {
+    font-weight: bold;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {    
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(15, 173, 201);
+    color: #000;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 18px;
+    font-family:'Times New Roman', Times, serif
+}
+
+button:hover {
+    background-color: rgb(243, 247, 10)
+}
+
+#resumeOutput {
+    margin-top: 20px;
+}
+
+#resumeContent {
+    color: white;
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    border: 2px solid #3498bd;
+    border-radius: 8px;
+    background-image: url(images/bg-1.gif);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
