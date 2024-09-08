@@ -1,3 +1,5 @@
+import jsPDF from 'jspdf';
+
 window.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('resumeForm') as HTMLFormElement;
   const resumeContent = document.getElementById('resumeContent') as HTMLElement;
@@ -87,10 +89,15 @@ window.addEventListener('DOMContentLoaded', () => {
   });
 
   function generatePDF() {
-    const { jsPDF} = window.jspdf;
-    const doc = new jsPDF();
-    doc.text(resumeContent.textContent || '', 10, 10);
-    doc.save('resume.pdf');
+    // Load jsPDF using the UMD module syntax
+    import('jspdf').then((module) => {
+      const { jsPDF } = module;
+      const doc = new jsPDF();
+      doc.text(resumeContent.textContent || '', 10, 10);
+      doc.save('resume.pdf');
+    }).catch((error) => {
+      console.error('Error loading jsPDF:', error);
+    });
   }
 
   function makeEditable(element: HTMLElement) {

@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Dynamic Resume Builder by Niba Khan</h1>
+    <h1>Milestone5: Unique Path and Shareable Link by Niba Khan</h1>
 
     <form id="resumeForm">
         <!-- Existing fields -->
@@ -61,16 +61,25 @@
     </section>
 
     <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 
 
-  <script>
-    document.getElementById('downloadPDF').addEventListener('click', () => {
-      const { jsPDF } = window.jspdf;
-      const doc = new jsPDF();
-      doc.text('Hello world!', 10, 10);
-      doc.save('resume.pdf');
-    });
-  </script>
+    <script>
+        document.getElementById('downloadPDF').addEventListener('click', () => {
+          const { jsPDF } = window.jspdf;
+          const doc = new jsPDF();
+          
+          // Add text to the PDF
+          doc.text("Niba Khan", 10, 10);
+          
+          // Add a clickable link
+          const linkURL = 'https://milestone2-resume-by-nibakhan.vercel.app';
+          doc.textWithLink('View Resume', 10, 20, { url: linkURL });
+      
+          // Save the PDF
+          doc.save('resume.pdf');
+        });
+      </script>
 </body>
 </html>
 
