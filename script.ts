@@ -87,7 +87,7 @@ window.addEventListener('DOMContentLoaded', () => {
   });
 
   function generatePDF() {
-    const { jsPDF } = window.jspdf;
+    const { jsPDF} = window.jspdf;
     const doc = new jsPDF();
     doc.text(resumeContent.textContent || '', 10, 10);
     doc.save('resume.pdf');

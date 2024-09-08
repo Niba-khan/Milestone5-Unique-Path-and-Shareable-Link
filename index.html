@@ -61,6 +61,16 @@
     </section>
 
     <script src="script.js"></script>
+
+
+  <script>
+    document.getElementById('downloadPDF').addEventListener('click', () => {
+      const { jsPDF } = window.jspdf;
+      const doc = new jsPDF();
+      doc.text('Hello world!', 10, 10);
+      doc.save('resume.pdf');
+    });
+  </script>
 </body>
 </html>
 
