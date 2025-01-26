@@ -1,20 +1,25 @@
 /* styles.css */
 
+
 body {
     font-family: Arial, sans-serif;
     padding: 20px;
-    background-image: url(images/background.gif);
+    background-color: rgb(9, 67, 69);
+    background-image: url(https://img.freepik.com/free-photo/top-view-desk-concept-with-gray-background_23-2148236825.jpg);
+     background-attachment: fixed; 
+    background-size: cover;
+    background-repeat: no-repeat; 
 }
 
 h1,h2{
     text-align: center;
-    color:white
+    color:rgb(5, 26, 24);
 }
 
 form {
     max-width: 600px;
     margin: auto;
-    background-image: url();
+    background-color: rgb(14, 109, 122);
     border-radius: 8px;
     box-shadow: 0 4px 8px rgb(0, 0, 0, 0.5);
     padding: 2px;
